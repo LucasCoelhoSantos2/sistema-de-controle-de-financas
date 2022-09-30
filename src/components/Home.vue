@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/logo.svg')"
+          :src="require('../assets/duck-duck-web.png')"
           class="my-3"
           contain
           height="200"
@@ -11,21 +11,15 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Bem vindo ao Sistema de Controle de Finanças
-        </h1>
+        <h1 class="display-2 font-weight-bold mb-3">Bem vindo ao Sistema de Controle de Finanças</h1>
 
-        <p class="subheading font-weight-regular">
-          Entre ou faça seu registro para começar!
-        </p>
+        <p class="subheading font-weight-regular"><a href="/entrar">Entre</a> ou faça seu <a href="/registrar">registro</a> para começar!</p>
       </v-col>
 
       <v-col
         class="mb-5"
         cols="12">
-        <h2 class="headline font-weight-bold mb-3">
-          Informações
-        </h2>
+        <h2 class="headline font-weight-bold mb-3">Informações</h2>
 
         <v-row justify="center">
           <a
@@ -46,7 +40,6 @@
   export default {
     name: 'HomePage',
     data: () => ({
-      usuarioLogado: false,
       importantLinks: [
         {
           text: 'Documentação',
