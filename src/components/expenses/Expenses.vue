@@ -148,9 +148,9 @@ export default {
           else return 'green rounded-circle'
     },
 
-    carregar (id) {
-      this.id = id
-      this.expense = { ...this.expenses[id] }
+    carregar (expenseId) {
+      this.expenseId = expenseId
+      this.expense = { ...this.expenses[expenseId] }
     },
 
     editExpense (item) {
@@ -165,9 +165,9 @@ export default {
       this.dialogDelete = true
     },
 
-    deleteExpenseConfirm (id) {
+    deleteExpenseConfirm (expenseId) {
       this.expenses.splice(this.editedIndex, 1)
-      this.$http.delete(`/expenses/${id}.json`)
+      this.$http.delete(`/expenses/${expenseId}.json`)
       this.closeDelete()
     },
 
@@ -188,8 +188,8 @@ export default {
     },
 
     save () {
-      const metodo = this.id ? 'patch' : 'post'
-			const finalUrl = this.id ? `/${this.id}.json` : '.json'
+      const metodo = this.expenseId ? 'patch' : 'post'
+			const finalUrl = this.expenseId ? `/${this.expenseId}.json` : '.json'
 			this.$http[metodo](`/expenses${finalUrl}`, this.editedExpense).then(() => {
 					this.mensagens.push({
 						texto: 'Operação realizada com sucesso!',
