@@ -11,14 +11,17 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">Bem vindo ao Sistema de Controle de Finanças</h1>
+        <h1 class="display-2 font-weight-bold mb-3">
+          Bem vindo ao Sistema de Controle de Finanças
+        </h1>
 
-        <p class="subheading font-weight-regular"><a href="/entrar">Entre</a> ou faça seu <a href="/registrar">registro</a> para começar!</p>
+        <p class="subheading font-weight-regular">
+          <a href="/entrar">Entre</a> ou faça seu
+          <a href="/registrar">registro</a> para começar!
+        </p>
       </v-col>
 
-      <v-col
-        class="mb-5"
-        cols="12">
+      <v-col class="mb-5" cols="12">
         <h2 class="headline font-weight-bold mb-3">Informações</h2>
 
         <v-row justify="center">
@@ -27,7 +30,8 @@
             :key="i"
             :href="next.href"
             class="subheading mx-3"
-            target="_blank">
+            target="_blank"
+          >
             {{ next.text }}
           </a>
         </v-row>
@@ -37,20 +41,20 @@
 </template>
 
 <script>
-  export default {
-    name: 'HomePage',
-    data: () => ({
-      importantLinks: [
-        {
-          text: 'Documentação',
-          href: 'https://github.com/LucasCoelhoSantos2/sistema-de-controle-de-financas',
-        },
-      ],
-    }),
-    methods: {
-      userLog() {
-        this.usuarioLogado = true
-      }
-    }
-  }
+export default {
+  name: "HomePage",
+  data: () => ({
+    importantLinks: [
+      {
+        text: "Documentação",
+        href: "https://github.com/LucasCoelhoSantos2/sistema-de-controle-de-financas",
+      },
+    ],
+  }),
+  methods: {
+    userLog() {
+      this.usuarioLogado = true;
+    },
+  },
+};
 </script>
